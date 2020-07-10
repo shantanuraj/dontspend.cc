@@ -1,0 +1,32 @@
+{
+  "name": "Don't Spend",
+  "version": "0.0.1",
+  "description": "Don't Spend Yo",
+  "manifest_version": 2,
+  "permissions": ["activeTab", "notifications", "storage"],
+  "options_ui": {
+    "page": "options/options.html",
+    "chrome_style": true,
+    "open_in_tab": true
+  },
+  "browser_action": {
+    "default_icon": {
+      "48": "icon-48.png",
+      "128": "icon-128.png",
+      "512": "icon-512.png"
+    },
+    "default_popup": "popup/popup.html",
+    "default_title": "Don't Spend"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/content.ts"]
+    }
+  ],
+  "icons": {
+    "16": "icon-16.png",
+    "48": "icon-48.png",
+    "128": "icon-128.png"
+  }
+}
